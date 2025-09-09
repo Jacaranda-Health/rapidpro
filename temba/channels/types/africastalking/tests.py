@@ -31,7 +31,7 @@ class AfricastalkingTypeTest(TembaTest):
 
         post_data["shortcode"] = "5259"
         post_data["username"] = "temba"
-        post_data["api_key"] = "asdf-asdf-asdf-asdf-asdf"
+        post_data["api_key"] = "a" * 128
         post_data["country"] = "KE"
 
         response = self.client.post(url, post_data)
@@ -39,7 +39,7 @@ class AfricastalkingTypeTest(TembaTest):
         channel = Channel.objects.get()
 
         self.assertEqual("temba", channel.config["username"])
-        self.assertEqual("asdf-asdf-asdf-asdf-asdf", channel.config["api_key"])
+        self.assertEqual("a" * 128, channel.config["api_key"])
         self.assertEqual("5259", channel.address)
         self.assertEqual("KE", channel.country)
         self.assertEqual("AT", channel.channel_type)
