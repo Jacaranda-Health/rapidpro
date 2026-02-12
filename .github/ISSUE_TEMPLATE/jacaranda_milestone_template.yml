@@ -1,0 +1,72 @@
+name: Milestone
+description: Use this template to create a milestone issue for any Jacaranda Health product
+title: "[Milestone]: "
+labels: [Milestone]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for creating a milestone issue! 🎯
+
+        Please provide as much detail as possible to help us understand and track this milestone.
+  - type: dropdown
+    id: milestone_product
+    attributes:
+      label: 🎯 Product
+      description: Select the product this milestone relates to
+      options:
+        - PROMPTS
+        - MENTORS
+        - DELTA
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: milestone_description
+    attributes:
+      label: 📝 Description
+      description: Provide a clear description of this milestone
+      placeholder: |
+        Describe the milestone, its goals, and any important context...
+    validations:
+      required: true
+  - type: textarea
+    id: milestone_acceptance_criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: Describe the criteria that must be met for this milestone to be considered complete
+      placeholder: |
+        The milestone will be considered complete when:
+        - [Criterion 1]
+        - [Criterion 2]
+        - [Criterion 3]
+    validations:
+      required: false
+  - type: textarea
+    id: milestone_extra_info
+    attributes:
+      label: 📋 Additional Information
+      description: Share any other relevant context, dependencies, or technical details
+      placeholder: |
+        ### Dependencies
+        [List any dependencies or prerequisites]
+
+        ### Related Issues
+        [Link to any related issues or discussions]
+
+        ### Timeline
+        [Any timeline or deadline information]
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        **📋 Important Reminders:**
+
+        1. You are responsible for communicating updates about this milestone with the team
+        2. Keep the issue updated as progress is made
+        3. For questions, contact the Tech Team Managers, Head of Department, or Director
+
+        **Thank you for helping us track our milestones! 🎉**
