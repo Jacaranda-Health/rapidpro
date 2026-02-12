@@ -1,0 +1,83 @@
+name: Bug Report
+description: Use this template to report a bug experienced on any Jacaranda Health product
+title: "[Bug Report]: "
+labels: [Bug Report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this bug! 🐛
+
+        Please provide as much detail as possible to help us reproduce and fix the issue quickly.
+  - type: dropdown
+    id: bug_product
+    attributes:
+      label: 🎯 Affected Product
+      description: Select the product where you experienced the bug
+      options:
+        - PROMPTS
+        - MENTORS
+        - DELTA
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: bug_replicate
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Provide clear, step-by-step instructions to reproduce the bug
+      placeholder: |
+        1. Go to [specific page/feature]
+        2. Click on [specific element]
+        3. Enter [specific data]
+        4. Observe the bug occurs
+
+        **Expected:** [What should happen]
+        **Actual:** [What actually happens]
+    validations:
+      required: true
+  - type: textarea
+    id: bug_acceptance_criteria
+    attributes:
+      label: ✅ Expected Behavior
+      description: Describe how the feature should work correctly
+      placeholder: |
+        The feature should:
+        - [Expected behavior 1]
+        - [Expected behavior 2]
+        - [Expected behavior 3]
+    validations:
+      required: true
+  - type: textarea
+    id: bug_extra_info
+    attributes:
+      label: 📋 Additional Information
+      description: Share any other relevant context, screenshots, or technical details
+      placeholder: |
+        ### Environment Details
+        - Browser: [Chrome, Firefox, Safari, etc.]
+        - OS: [Windows, Mac, Linux, iOS, Android]
+        - Version: [Product version if known]
+
+        ### Screenshots/Videos
+        [Add screenshots or screen recordings showing the bug]
+
+        ### Error Messages
+        [Copy any error messages or console logs]
+
+        ### Related Issues
+        [Link to any related issues or discussions]
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        **📋 Important Reminders:**
+
+        1. You are responsible for communicating updates about this bug report with the team
+        2. Keep the issue updated as progress is made
+        3. For questions, contact the Tech Team Managers, Head of Department, or Director
+
+        **Thank you for helping us improve our products! 🎉**
